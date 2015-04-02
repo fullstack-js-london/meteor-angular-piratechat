@@ -1,0 +1,20 @@
+<div ng-controller="HomeCtrl">
+<br>
+	<form ng-submit="addTodo()">
+	  <label>Message</label>
+	  <input ng-model="newMessage">
+	  <button type="submit">Add</button>
+	</form>
+<br>
+
+  <div ng-show="messages.length">
+  <h3>Messages</h3>
+  <md-content class="md-padding" style="height: 600px;padding: 24px;">
+  <md-progress-circular md-mode="indeterminate" ng-show="loading"></md-progress-circular>
+	<div ng-repeat="message in messages">
+		<strong>{{message.user}}:</strong> {{message.message}} <md-button ng-click="deleteMessage(message)">Delete</md-button>
+	</div>
+  </md-content>
+  </div>
+
+</div>

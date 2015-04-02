@@ -1,0 +1,21 @@
+<head>
+  <title>app</title>
+</head>
+
+<body>
+<div ng-app="app">
+ <div layout="column" layout-fill>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <span>{{> loginButtons}}</span>
+      <!-- fill up the space between left and right area -->
+      <span flex></span>
+      <h2>Fullstack.js Meteor Demo</h2>
+    </div>
+  </md-toolbar>
+</div>
+{{user}}
+ <div ng-include="'index.ng.html'"></div>
+
+</div>
+</body>
